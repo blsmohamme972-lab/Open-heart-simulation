@@ -65,4 +65,8 @@ The native Android app, shaders, animation rig and tool physics remain unbuilt. 
 
 The owner requested another check of the Android proposal. Baseline `f7e57e5` is reviewed in [OHS-ANDROID-RECHECK-002](android-review/05-REVERIFICATION.md). Two read-only source reviewers assisted; the coordinator rechecked all ten coronary STL phases and the instrument APIs. All ten source MD5 checks pass, and the original two SHA256 hashes match the earlier inspection.
 
-Stage G1 records evidence and concrete corrections: 16 KB native packaging, pinned platform/toolchain requirements, renderer/pacing defaults, temporal contact synchronization and asset-readiness limits. This checkpoint contains the audit and ten-file structural record. Stage G2 will reconcile proposal 002 and its supporting reports, verify documentation, and upload revision 2. No app implementation or phone benchmark is claimed.
+Stage G1 records evidence and concrete corrections: 16 KB native packaging, pinned platform/toolchain requirements, renderer/pacing defaults, temporal contact synchronization and asset-readiness limits. Audit and ten-file structural evidence were uploaded in `6278268`.
+
+Stage G2 reconciles proposal 002 revision 2, all four supporting reports and repository navigation. Both additional reviewers checked the corrections; a two-sample connectivity-scope ambiguity was clarified. The current commit is the revision checkpoint, with remote delivery checked at handoff. No app implementation or phone benchmark is claimed.
+
+Verification passed for 26 Markdown files and 156 local links/anchors, code-fence balance, JSON/hash consistency and `git diff --check`. Existing example/test code, `.gitignore` and proposal 001 are unchanged from `f7e57e5`.

@@ -18,8 +18,8 @@ The desktop-first platform and automatic Unreal preference in proposal OHS-PROPO
 | A | Corrected scope and audit brief | Uploaded in `00150f4` |
 | B | Focused source review of engine, animation, assets and tools | Uploaded in `6e37271` |
 | C | New Android proposal, comparison to old choices, acceptance tests and source navigation | Uploaded in `f7e57e5` |
-| D1 | Requested second verification and all ten coronary phase files checked | Evidence checkpoint; see [audit](05-REVERIFICATION.md) |
-| D2 | Proposal revision 2 and report reconciliation | In progress after evidence checkpoint |
+| D1 | Requested second verification and all ten coronary phase files checked | Uploaded in `6278268`; see [audit](05-REVERIFICATION.md) |
+| D2 | Proposal revision 2 and report reconciliation | Complete; commit containing this record is the revision checkpoint |
 
 Each completed stage is committed and pushed to the repository. Parallel review assistance was used; some workers stopped with workspace credit-limit errors. The coordinator continues the unsaved work and does not claim an independent clinical or runtime validation.
 
@@ -39,4 +39,6 @@ Godot Mobile/Vulkan is a provisional open-source-first candidate, conditional on
 
 No device preference was received during this review; high-end-first remains an explicit reversible assumption. “World-leading” is an ambition to test through defined comparison criteria, not an achieved result.
 
-Documentation checks passed across 25 Markdown files and 138 local links/anchors; the inspection JSON is internally consistent and `git diff --check` passed. Existing Python example/test files and `.gitignore` match the pre-review commit `b761761`. No runtime test result is implied by these checks.
+Revision 1 documentation checks passed across 25 Markdown files and 138 local links/anchors. The second verification expands source and geometry evidence, adds explicit Android packaging/defaults and contact timing contracts, and reconciles the four reports with proposal revision 2. Both additional reviewers checked the revised text; their findings were addressed. Existing Python example/test files, `.gitignore` and historical proposal 001 remain unchanged. No runtime test result is implied by documentation checks.
+
+Revision 2 verification passed: 26 Markdown files, 156 local links/anchors, balanced code fences, `git diff --check`, and consistency of the ten-file JSON with source checksums and the earlier two-file hashes. Upload verification compares the final commit with the remote branch at handoff.

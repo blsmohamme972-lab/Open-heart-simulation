@@ -2,6 +2,8 @@
 
 **Current proposal: [OHS-PROPOSAL-002 — Android Heart, Animation & Instrument Realism](docs/proposals/OHS-PROPOSAL-002-ANDROID-REALISM.md).** It revisits the engine, heart animation, assets and surgical-tool interaction for Android. The [supporting review](docs/plan/android-review/00-REVIEW-STATUS.md) records sources, limited geometry inspection and validation gates. The desktop-first proposal below is preserved as an earlier candidate.
 
+**Revision 2:** [second verification](docs/plan/android-review/05-REVERIFICATION.md) adds native Android packaging, explicit pacing/renderer policy, temporal contact synchronization and structural checks of all ten coronary motion files. This remains a plan; no APK or phone benchmark is claimed.
+
 ## المقترح الموحّد / Consolidated proposal
 
 **[OHS-PROPOSAL-001 — Codex Research & Design Proposal](docs/proposals/OHS-PROPOSAL-001-CODEX.md)**

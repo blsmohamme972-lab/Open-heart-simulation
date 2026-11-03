@@ -2,6 +2,8 @@
 
 Research accessed **2026-11-03**. This replaces the desktop engine recommendation for the corrected Android scope. It is planning only: no builds, assets, frame rates or device tests were produced. Scope here is rendering supporting heart animation and surgical-tool interaction; full-case physiology and OR production are outside this review.
 
+Updated after [second verification](05-REVERIFICATION.md), evidence checkpoint `6278268`: platform packaging, engine defaults and profiler selection are now explicit gates.
+
 ## Provisional decision
 
 Start the comparison with **Godot Mobile on Vulkan**, using an explicitly declared high-end Android device tier. This satisfies an open-source-first engine preference and gives an integrated editor, scene system and Android export path. Maintain a separately tested **Compatibility/OpenGL ES** visual tier only if broader device coverage is required. Do not promise identical appearance between renderers. Godot documents different feature sets and recommends Mobile/Compatibility instead of Forward+ for mobile workloads. [Renderer overview](https://docs.godotengine.org/en/stable/tutorials/rendering/renderers.html)
@@ -39,7 +41,13 @@ Android documents Vulkan availability from API 24 and Vulkan 1.1 support on 64-b
 
 Use at least one Adreno and one Mali/Immortalis device, plus the eventual lowest supported device. Record SoC/GPU, RAM, OS, driver, refresh rate and API/format features. Emulator or desktop editor success cannot establish phone performance. The native extension build must also survive background/resume, screen changes and graphics-context recreation without losing interaction state.
 
+Pin an exact engine/export-template pair, native dependencies, `arm64-v8a` ABI, minimum/target SDK and required GPU features before benchmarking. Current Godot exported-project documentation lists Android 9.0 for Mobile/Forward+ and 7.0 for Compatibility; platform Vulkan availability is a different constraint. These minimums do not define a high-fidelity performance tier. [Godot system requirements](https://docs.godotengine.org/en/stable/about/system_requirements.html#exported-godot-project).
+
+Add a **native packaging gate** for the complete build: compatible engine libraries and every plugin/solver dependency, correct ELF/package alignment, and execution in verified 4 KB/16 KB environments. Record the page size and whether compatibility mode was involved; do not treat a compatibility-mode launch as proof of native compliance. Follow current [Android page-size guidance](https://developer.android.com/guide/practices/page-sizes); a source library's ARM64 build alone does not pass this gate. Emulator testing can establish some compatibility checks but cannot replace physical-device performance tests.
+
 Frame pacing is distinct from average FPS. Android's Swappy library supports OpenGL and Vulkan presentation pacing. Verify the selected engine/version's actual integration and settings; do not assume enabling VSync alone is enough. Record present intervals and missed deadlines. [Android Frame Pacing](https://developer.android.com/games/sdk/frame-pacing)
+
+Godot documents Swappy enabled by default with automatic pacing. Pin and test the selected mode, refresh rate and frame cap; record cadence transitions instead of silently accepting a lower tier. Detect the actual renderer and disable unapproved fallback or route it to an explicitly qualified tier. [Swappy settings](https://docs.godotengine.org/en/stable/classes/class_projectsettings.html#class-projectsettings-property-display-window-frame-pacing-android-swappy-mode), [renderer fallback](https://docs.godotengine.org/en/stable/tutorials/rendering/renderers.html#switching-between-renderers).
 
 ADPF exposes thermal/performance information so applications can adapt workload before it becomes unsustainable. Plan a supported Android integration, with a fallback policy when signals are unavailable. Reduce resolution, secondary shadows and decorative effects before altering anatomically meaningful geometry or contact behavior. Fixed-performance benchmarking is useful for comparisons but does not replace a normal-mode thermal soak. [ADPF overview](https://developer.android.com/games/optimize/adpf), [best practices](https://developer.android.com/games/optimize/adpf/best-practices-adpf)
 
@@ -72,6 +80,8 @@ Keep high-resolution authoring assets separate from runtime LODs. Render and col
 **Proposed engineering targets, not measurements:** aim initially for 60 FPS/16.67 ms on the selected high-end tier; test a deliberate 30 FPS/33.33 ms tier only if needed and reassess precision/usability. Start at a fixed 1920×1080-equivalent render workload, then evaluate adaptive resolution. No hardware-independent 60 FPS promise is made.
 
 Run cold startup and 30-minute normal-mode sessions at recorded brightness, ambient conditions, charge state and display settings. Capture CPU/GPU timings, p95/p99 presented intervals, missed frames, thermal status, memory peaks/growth and touch-to-visible latency. Repeat the hardest camera/contact sequence after warming. Judge improvements at equal visual quality and include shader-compilation stalls and resume behavior.
+
+Qualify profiling support on each selected phone/driver. The [AGI quickstart](https://developer.android.com/agi/start) recommends Android Performance Analyzer for system profiling; AGI frame profiling remains documented. Use a supported tool route and trace/in-app instrumentation where needed, recording instrumentation overhead. Do not infer that all AGI capabilities are deprecated or that every phone supports every capture mode.
 
 Pass only if: (1) anatomical and contact review accepts the displayed scene; (2) all supported devices meet their declared sustained frame/latency envelopes; (3) no contact drift, missed input, corrupt materials or unbounded memory growth appears; (4) fallback behavior preserves interaction meaning; and (5) packaged dependency/asset licenses are complete. Set numeric latency and memory limits after selecting devices and performing an initial profile, before final acceptance.
 

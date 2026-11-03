@@ -41,6 +41,8 @@ True independent bimanual 6-DOF control is not supplied by a flat touchscreen. P
 
 Animate the regional control surface first, resolve tool contact against that moving geometry, then map its contact correction to the render surface. Use swept/continuous collision tests for thin structures and fast tools, with bounded substeps as needed. Verify that a deforming collider is spatially synchronized with what the user sees. Disabling contact while the heart moves would fail the realism goal.
 
+The repeat audit adds [explicit time ownership](02-heart-animation.md#timing-and-event-ownership): collision must include tissue motion within the solver step, and the presented tool/tissue/contact cues must use consistent timestamps. A shared cage evaluated at different times can still visibly penetrate. Record topology revisions and interpolation resets; visual input prediction must not authorize tissue damage. This requires a tested custom interaction pipeline, not just an engine interpolation checkbox.
+
 Start with a bounded local deformable patch and explicit anatomical attachments. XPBD is a candidate numerical method; it does not supply correct tissue properties automatically. [Original XPBD paper](https://matthias-research.github.io/pages/publications/XPBD.pdf). The MIT [PositionBasedDynamics library](https://github.com/InteractiveComputerGraphics/PositionBasedDynamics) is a code/reference candidate; selected dependencies, ARM64 build and Android integration are untested. No library adoption is implied by this review.
 
 Keep cosmetic contact, elastic deformation, irreversible damage and connection state separate. For example, a clamp can indent a vessel and change its modeled lumen; these effects need consistent ownership. Wound surfaces, attachment IDs and future punctures must survive visual LOD or animation-state changes. Unsupported collisions or numerical failures are model faults, not automatic patient penalties.
@@ -52,7 +54,7 @@ Suturing begins with acquisition, orientation, bounded curved passage, tissue an
 | Fixture | Required result |
 |---|---|
 | Jaw sweep and grip | Visible jaws and colliders agree; release does not leave a hidden attachment |
-| Moving-heart contact | Tool remains on the same material region; no coronary sliding or rest-pose collision |
+| Moving-heart contact | Stationary and moving tools stay consistent with moving tissue; trace spatial error and temporal lag across variable render cadence |
 | Fast motion / thin vessel | No unsupported tunnelling within the declared input-speed envelope |
 | Needle curvature | Same entry and path replay yields consistent anchors; no impossible straight-through teleport |
 | Clamp placement | Compression/occlusion follows the actual selected structure, not the nearest label |

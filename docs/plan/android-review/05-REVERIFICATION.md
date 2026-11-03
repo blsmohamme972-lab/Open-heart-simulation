@@ -4,6 +4,8 @@
 
 The owner requested another careful check. This audit revisits official platform documentation, the source paper and dataset, asset metadata, and the actual coronary mesh files. Two additional read-only reviewers covered Android and motion/assets; the coordinator repeated the geometry checks and reconciled their findings. This is technical/source review, not independent clinical validation.
 
+Evidence was uploaded in `6278268`. The corrections below are incorporated into proposal revision 2 and the four supporting reports. Both reviewers re-read the revised text; the original two-file indexing diagnostic is now distinguished explicitly from the ten-file structural recheck.
+
 ## Verdict
 
 The regional heart-motion approach and functional-tool requirements remain reasonable proposals. **The plan needed corrections before implementation:** native Android packaging, engine defaults, temporal contact synchronization, and more precise asset-readiness evidence. Godot remains a candidate; no engine or asset has passed a phone or specialist acceptance test.
@@ -65,6 +67,6 @@ Counts refer to the source listings, not measured exported Android geometry. Zer
 
 ## 5. What remains unresolved
 
-No phone model, minimum performance tier, reviewed tissue-force parameters, clinical error thresholds, custom material, rig, contact implementation or APK exists. Those remain explicit future gates. Healthy CMR, a coronary CT reconstruction and a noncardiac suturing study cannot collectively certify this simulator. Revision 2 must preserve these limits while adding the corrections above.
+No phone model, minimum performance tier, reviewed tissue-force parameters, clinical error thresholds, custom material, rig, contact implementation or APK exists. Those remain explicit future gates. Healthy CMR, a coronary CT reconstruction and a noncardiac suturing study cannot collectively certify this simulator. Revision 2 preserves these limits while adding the corrections above.
 
 Another agent should compare this audit, [the revised proposal](../../proposals/OHS-PROPOSAL-002-ANDROID-REALISM.md), the four supporting reports and both inspection records. Improve an identified gate with evidence; do not treat repeated source checking as a completed device benchmark.

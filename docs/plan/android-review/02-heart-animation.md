@@ -44,11 +44,21 @@ Coronaries, fat, sutures and landmarks bind to material coordinates or stable re
 
 Blender shape keys store positions for existing vertices; matching topology and correspondence matter. Direct manual retrieval failed during this run, so the official indexed workflow text is used only for this basic authoring constraint. [Blender workflow](https://docs.blender.org/manual/en/latest/animation/shape_keys/workflow.html). Godot's import path needs a real round-trip test for the chosen rig, shapes and metadata. [Godot 3D import](https://docs.godotengine.org/en/stable/tutorials/assets_pipeline/importing_3d_scenes/index.html).
 
+### Timing and event ownership
+
+Added after the [second verification](05-REVERIFICATION.md). Shared geometry must also have shared time semantics. Maintain timestamped authoritative tool/tissue snapshots and ordered accepted input. Advance cardiac phase within the tested solver/substep policy; swept collision must account for the motion of both tool and tissue, including a stationary tool approached by the beating surface.
+
+Render the operative tool, tissue, anchors and contact cues at a consistent presentation time. Engine interpolation can add delay; it does not automatically interpolate custom cage data or make collision and displayed positions coincide. Trace spatial mapping error separately from simulation-to-presentation delay and touch-to-visible latency. [Godot interpolation explanation](https://docs.godotengine.org/en/stable/tutorials/physics/interpolation/physics_interpolation_introduction.html).
+
+Carry topology/attachment revisions with each snapshot. Do not interpolate incompatible wound meshes; reset history after discontinuities or resume. Prediction may guide a visual cursor, while accepted simulation inputs alone commit punctures/cuts. Keep the declared solver tick/substep policy stable within a tested configuration and explicitly handle overload instead of silently changing motion/contact semantics.
+
 ## Concrete sample inspection
 
-Two CC BY 4.0 coronary STL phases, 10% and 50%, were downloaded to temporary workspace storage outside the repository. Both have **39,368 triangles**, **19,740 exact-coordinate unique positions** and **118 boundary edges**, with no edge having more than two incident triangles under that deduplication method. File hashes and native-coordinate bounds are in [the inspection record](motion-sample-inspection.json).
+The initial inspection covered CC BY 4.0 coronary STL phases 10% and 50%, with hashes and native-coordinate bounds in [the initial record](motion-sample-inspection.json). The repeat check covers **all ten phases**: each has **39,368 triangles**, **19,740 exact-coordinate unique positions** and **118 boundary edges**, with no edge incident to more than two triangles under exact-coordinate deduplication. Publisher MD5 checks pass for all ten; the original two SHA256 hashes match. [Full-sequence structural record](coronary-sequence-recheck.json).
 
-Crucially, their first-occurrence-indexed triangle connectivity hashes differ. Equal vertex/triangle counts therefore do **not** establish a valid direct morph pairing. This may be ordering/serialization rather than different anatomical topology; correspondence must be recovered and checked before interpolation. STL also supplies no unit declaration. The mesh name “walls” does not prove a modeled wall thickness or two-sided lumen tissue suitable for suturing.
+The initial two samples' first-occurrence-indexed triangle connectivity hashes differ. Equal vertex/triangle counts therefore do **not** establish a valid direct morph pairing. This may be ordering/serialization rather than different anatomical topology; correspondence must be recovered and checked before interpolation. STL also supplies no unit declaration. The mesh name “walls” does not prove a modeled wall thickness or two-sided lumen tissue suitable for suturing.
+
+The [source paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC10811335/) intends preserved connectivity while transforming the reference mesh. It concerns one patient's CT reconstruction, with coarser dynamic images than the high-resolution reference. Do not interpret the ordering-dependent digest mismatch as rejection of that method. Export correspondence still needs verification; neither segmentation registration nor ten sparse phases independently proves material-point motion, dense motion derivatives or behavior under surgical support.
 
 This was a binary geometry/metadata inspection only: no rendering, registration, tissue mechanics or clinical acceptance was performed. The downloaded binaries are not committed.
 
@@ -57,7 +67,7 @@ This was a binary geometry/metadata inspection only: no rendering, registration,
 1. **Motion replay:** compare held-out landmark trajectories, regional phase, silhouette and cavity changes against the selected source. Report units, error distribution, segmentation uncertainty and reviewer disagreement.
 2. **Cycle continuity:** inspect slow motion and normal playback around the loop boundary; no position/velocity pop or visible coronary slip.
 3. **State transitions:** loaded/unloaded, beating/arrested and recovery transitions preserve attachments and local contacts without hidden resets.
-4. **Tool synchronization:** maintain contact on the animated tissue at several phases, orientations and frame rates; measure surface-to-collider deviation at the tip.
+4. **Tool synchronization:** test stationary-tool/moving-tissue and moving-tool/moving-tissue cases; vary render cadence and inject stalls while preserving the tested solver policy. Measure surface-to-collider deviation and temporal lag separately, including arrest and resume transitions.
 5. **Retraction and release:** baseline movement and local contact do not double-deform tissue; residual damage remains separate from elastic recovery.
 6. **Topology/LOD:** no inverted local elements, unintended self-intersection, closing lumen, missing needle anchor or reappearing wound after a supported transition.
 7. **Warm Android replay:** repeat the identical contact/motion trace after thermal soak; lowering visual quality must not alter anatomical IDs or event results.

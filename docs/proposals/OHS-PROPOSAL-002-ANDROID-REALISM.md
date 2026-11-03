@@ -4,13 +4,15 @@
 
 | Field | Value |
 |---|---|
-| Proposal | OHS-PROPOSAL-002-ANDROID-REALISM, revision 1 |
+| Proposal | OHS-PROPOSAL-002-ANDROID-REALISM, revision 2 |
 | Date / author | 2026-11-03 / Codex with focused engine review assistance |
 | Requirement | Android application; very high realism and sustained performance |
 | Current scope | Heart animation, anatomy/instrument assets, rendering engine and tool–tissue contact |
 | Supersedes | Desktop-first platform, rendering and input assumptions in OHS-PROPOSAL-001 |
 | Status | Researched proposal; engine choice and fidelity require implementation evidence |
-| Evidence baseline | Review checkpoint `6e37271`; two coronary STL samples inspected structurally |
+| Evidence baseline | Initial review `6e37271`; second audit `6278268`; all ten coronary STL phases inspected structurally |
+
+Revision 2 incorporates [OHS-ANDROID-RECHECK-002](../plan/android-review/05-REVERIFICATION.md). Revision 1 remains in commit `f7e57e5`; proposal 001 remains a separate historical candidate.
 
 ## الخلاصة بالعربية
 
@@ -21,6 +23,8 @@
 الأداة الواقعية تحتاج قياسات صحيحة، مفصلًا وفكوكًا أو حافة فعالة، ونموذج تماس يطابق شكلها المرئي. الملقط يمسك منطقة نسيج محددة؛ الإبرة تتبع انحناءها مع نقاط دخول وخروج محفوظة؛ المشبك يغيّر الضغط الموضعي وحالة الوعاء الممثلة؛ والقطع يُظهر سطحًا داخليًا مستمرًا. الإحساس بقوة الأنسجة لا توفره شاشة اللمس، لذلك تُسجّل مساعدات التحكم بوضوح.
 
 هدف «أفضل محاكاة في تاريخ البشرية» يُحفظ كطموح. إثبات التفوق يحتاج مقارنة منشورة ومراجعة مختصين واختبارات هاتف، وليس وصفًا تسويقيًا. هذه النسخة تحدد مواصفات الوصول إلى واقعية عالية، وما يجب قياسه قبل ادعائها. لم يبدأ تنفيذ التطبيق.
+
+المراجعة الثانية أضافت توافق مكتبات أندرويد مع صفحات ذاكرة 16 كيلوبايت، وضبط تغيّر معدل الإطارات والمحرك تلقائيًا، ومزامنة زمن حركة القلب والأداة والتماس. كما شملت فحص الملفات العشرة لحركة الشرايين؛ هذا فحص بنيوي للملفات، ولا يثبت وحده دقة الحركة الطبية أو جاهزية الأصول للتطبيق.
 
 ## 1. Review verdict and changes
 
@@ -44,6 +48,8 @@ Test an opaque tissue material with regional color, thickness-informed diffuse/b
 If that route fails the visual/performance gate after a bounded repair attempt, compare **Unity URP** only if proprietary engine terms are acceptable. URP package source is not an open-source license for the Unity editor. **Filament**, licensed Apache-2.0, is the alternative open renderer, but would require more application/editor/interaction work. Unreal's mobile renderer remains a measured alternative rather than a desktop-quality assumption. Detailed capability and license evidence is in the [engine review](../plan/android-review/01-engine-rendering.md).
 
 Do not choose an engine from a still image or a desktop demo. Export the same source anatomy and replay the same camera, light and contact workload in the candidate builds. Record different approximations rather than pretending renderer features are identical. The winner must pass appearance, motion, contact, thermal, input and licensing gates together.
+
+Before comparison, pin the engine and matching export templates, native dependency versions, ARM64 ABI, SDK policy and device feature requirements. Android's Vulkan availability alone is not the engine's minimum requirement or this application's support tier. Record the actual renderer; disable unapproved fallback or handle it as a separately qualified tier. See the [platform and defaults recheck](../plan/android-review/05-REVERIFICATION.md#1-android-findings-and-primary-sources).
 
 ## 3. How the heart should look and move
 
@@ -77,6 +83,8 @@ flowchart LR
 
 Evaluate a compact control cage/deformation basis on the CPU where practical, with visual interpolation on the GPU. Reuse the same geometry mapping for contacts. Avoid full-mesh synchronous GPU readback. A GPU-only beating surface with a stationary collider is a blocking defect.
 
+**Time is part of the contact contract.** Timestamp tissue/tool snapshots and accepted inputs; evaluate cardiac motion through the simulation substeps and test swept contact against moving tissue. Present tissue, tools, sutures and contact cues at a consistent presentation time. Engine interpolation can delay visuals, so measure temporal lag separately from spatial mapping error. Do not interpolate across incompatible topology revisions or commit cuts from predicted cursor input. Test stationary-tool/beating-heart contact and variable render cadence explicitly. [Detailed timing contract](../plan/android-review/02-heart-animation.md#timing-and-event-ownership).
+
 Keep the baseline supported state space small enough to validate. Offline FEM or measured-motion fitting can improve the reference basis, but neither becomes clinical truth automatically. Arbitrary deformation outside the basis needs a defined limit and later evidence. The [animation review](../plan/android-review/02-heart-animation.md) specifies representation tradeoffs and fixtures.
 
 ## 4. How surgical tools should behave
@@ -105,9 +113,11 @@ Record snapping, gain, trajectory guidance and assisted knot completion. Stylus 
 
 The [fresh asset review](../plan/android-review/03-assets-licenses.md) records exact sources and licenses. The main candidates are direct BodyParts3D and HRA geometry, a versioned CC BY 4.0 coronary-motion dataset, Sunnybrook cine-MRI under CC0 with an unresolved download route, and explicitly licensed instrument references. Original coronary-wall, tip/jaw and tissue-patch authoring remains necessary when those sources lack the required structure.
 
-Two coronary phase files were structurally inspected. Their counts match, but their first-occurrence-indexed connectivity hashes differ; direct index-to-index morphing is not verified. Both also contain boundary edges, and STL does not declare units. These findings make scale, correspondence and wall reconstruction explicit gates. [Inspection record](../plan/android-review/motion-sample-inspection.json).
+All ten coronary phase files were structurally inspected and match their publisher checksums: each has 39,368 triangles, 19,740 exact-coordinate unique positions and 118 boundary edges. The earlier two-file ordering-dependent connectivity hashes differ, while the source method intends preserved connectivity. This is not proof of different anatomical topology; recover and verify the exported correspondence before morphing. STL does not declare units. Scale, tissue-wall reconstruction and correspondence remain gates. [Initial record](../plan/android-review/motion-sample-inspection.json), [ten-file recheck](../plan/android-review/coronary-sequence-recheck.json).
 
 This inspection does not establish clinical accuracy, motion quality or watertight tissue. The raw files remain outside the repo. All other new candidates were inspected at page/metadata level only. A source license, geometric inspection and runtime acceptance are separate status fields.
+
+The coronary reference concerns one patient's CT reconstruction; its sparse phases do not validate arbitrary surgical states or dense motion derivatives. The two instrument listings report roughly 1.2 million and 615 thousand faces with no listed animations. Treat them as offline reference/preparation candidates until dimensions, separable parts, articulation, tips and mobile exports are inspected. Metadata is not a functional asset approval. [Source details](../plan/android-review/05-REVERIFICATION.md).
 
 For every future asset: preserve creator, exact release/file, hash, license evidence, credits, changes, coordinate system, anatomy IDs, motion mapping, derivative/export lineage and reviewer status. Public redistribution must be allowed even when the intended use is personal. Noncommercial material remains clearly marked; no asset or engine is called open source merely because it costs nothing.
 
@@ -117,7 +127,9 @@ No device model was supplied. The working assumption is **high-end Android first
 
 **Proposed engineering target:** sustained 60 FPS on the selected high tier, with 16.67 ms frame deadlines and measured p95/p99 presentation intervals. A 30 FPS tier is a separate product/usability decision, not an invisible fallback. Rendering resolution, memory budget and latency limits must be recorded per device after an initial profile, before final acceptance.
 
-Run cold and 30-minute normal-mode tests at recorded brightness, ambient conditions, charge state, driver, OS and scene version. Capture CPU/GPU work, missed presentation deadlines, touch-to-visible response, thermal state, memory growth, startup/shader stalls and resume behavior. Use supported profiling tools and ADPF where integration is available. [Android ADPF](https://developer.android.com/games/optimize/adpf), [Android GPU Inspector](https://developer.android.com/agi).
+Explicitly configure and test the pacing mode, display refresh and frame cap: automatic Swappy settings may change cadence. Log such transitions and the actual rendering backend. Qualify the entire native package, including engine and plugins, for 4 KB and 16 KB page-size environments; check library/package alignment and execute the shipped build. A compatible engine template alone does not clear an added solver library. [Android packaging guidance](https://developer.android.com/guide/practices/page-sizes).
+
+Run cold and 30-minute normal-mode tests at recorded brightness, ambient conditions, charge state, driver, OS and scene version. Capture CPU/GPU work, missed presentation deadlines, touch-to-visible response, thermal state, memory growth, startup/shader stalls and resume behavior. Qualify APA for system profiling and supported frame-profiling tools against the selected phone/driver, with trace/in-app instrumentation where necessary. Use ADPF where integration is available. [Android ADPF](https://developer.android.com/games/optimize/adpf), [profiling guidance](https://developer.android.com/agi/start).
 
 When reducing workload, reduce background detail, excess effects/shadows and render resolution within readability limits before changing anatomical contact meaning. Preserve active-region collision, stable IDs and authoritative event behavior. Pause/report unsupported overload instead of silently letting tools penetrate while maintaining a high FPS counter.
 
@@ -129,9 +141,10 @@ When reducing workload, reduce background detail, excess effects/shadows and ren
 | Motion | Held-out regional trajectories/phase and state-transition review, with documented uncertainty and tolerances |
 | Materials | Neutral and surgical-light comparisons, moving highlights, fat/vessel separation and macro readability |
 | Instrument function | Measured dimensions/articulation plus normal/fast-motion contact fixtures |
-| Animation/contact agreement | Tip-to-surface error traced through the cycle, contact, cut and LOD transitions |
+| Animation/contact agreement | Spatial error and temporal lag traced through moving-tissue contact, variable rendering cadence, cuts and LOD transitions |
 | Touch usability | Targeting, curved passage, two-tool exposure, gesture interruption and assistance logs |
 | Sustained Android behavior | Named physical-device reports, thermal soak and fixed-script repeatability |
+| Android packaging and defaults | Pinned toolchain/ABI; 4 KB/16 KB execution; logged renderer and pacing/refresh policy |
 | Rights | Every shipped file/dependency cleared for its actual redistribution route |
 | Comparative claim | Preregistered comparison criteria, named product/build/device versions, equivalent tasks and review method |
 
@@ -143,13 +156,13 @@ Do not collapse these into one “realism score” before the measures are justi
 2. **One heart, two tools:** author a low-cost rig/control surface, fine holder/forceps and needle; verify contact during beating and arrest.
 3. **Material gate:** evaluate tissue/fat/blood-film/tool materials under controlled lighting on the candidate Android renderer.
 4. **Interaction gate:** grasp/release, indentation, curved passage and one bounded tissue transition; assisted knot explicitly identified.
-5. **Device gate:** package to selected phones, profile cold/warm operation, input and lifecycle; compare the fallback only when a diagnosed failure warrants it.
+5. **Device gate:** verify native packaging/page sizes and renderer/pacing policy; profile cold/warm operation, input and lifecycle on selected phones; compare the fallback only when a diagnosed failure warrants it.
 6. **Review gate:** inspect anatomy/motion/tool behavior and blind comparison clips where appropriate; publish findings and a revised choice before expanding scope.
 
 This is a future implementation sequence, not work already performed. The present changes are planning documents and an inspection record. No Android APK, engine project, shader, rig or playable interaction has been built.
 
 ## 9. Instructions for the next reviewing agent
 
-Treat Android as a fixed user requirement. Read the four focused reports and the inspection record before recommending a stack. Challenge this proposal using exact sources and reproducible scene/device evidence. Distinguish a missing engine feature from a feasible custom approximation, and a plausible animation from validated motion.
+Treat Android as a fixed user requirement. Read the four focused reports, the second-verification audit and both inspection records before recommending a stack. Challenge this proposal using exact sources and reproducible scene/device evidence. Distinguish a missing engine feature from a feasible custom approximation, and a plausible animation from validated motion.
 
 For each alternative, state which gate it improves, what it costs in performance/content work/rights, and the experiment that would decide. Preserve the previous proposal for comparison. Do not silently promote a desktop feature, a static mesh, a source-code demo, or a noncardiac haptic study into proof of Android surgical realism.
