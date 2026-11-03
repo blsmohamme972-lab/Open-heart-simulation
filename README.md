@@ -4,6 +4,8 @@
 
 **Revision 2:** [second verification](docs/plan/android-review/05-REVERIFICATION.md) adds native Android packaging, explicit pacing/renderer policy, temporal contact synchronization and structural checks of all ten coronary motion files. This remains a plan; no APK or phone benchmark is claimed.
 
+**Heart appearance experiment:** [OHS-HEART-APPEARANCE-001](docs/concepts/heart-appearance-001/README.md) is a generated 2D visual concept for discussion. It is not yet a 3D asset or animation.
+
 ## المقترح الموحّد / Consolidated proposal
 
 **[OHS-PROPOSAL-001 — Codex Research & Design Proposal](docs/proposals/OHS-PROPOSAL-001-CODEX.md)**

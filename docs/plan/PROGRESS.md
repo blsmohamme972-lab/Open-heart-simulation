@@ -70,3 +70,7 @@ Stage G1 records evidence and concrete corrections: 16 KB native packaging, pinn
 Stage G2 reconciles proposal 002 revision 2, all four supporting reports and repository navigation. Both additional reviewers checked the corrections; a two-sample connectivity-scope ambiguity was clarified. The current commit is the revision checkpoint, with remote delivery checked at handoff. No app implementation or phone benchmark is claimed.
 
 Verification passed for 26 Markdown files and 156 local links/anchors, code-fence balance, JSON/hash consistency and `git diff --check`. Existing example/test code, `.gitignore` and proposal 001 are unchanged from `f7e57e5`.
+
+## H — Heart-only appearance experiment
+
+The owner requested a small experiment showing the heart's appearance. [OHS-HEART-APPEARANCE-001](../concepts/heart-appearance-001/README.md) records the generated 2D concept and its provenance. The original PNG is copied unchanged to the repository; no third-party model, animation, engine project or app implementation was added. Anatomical acceptance and feasibility of matching this look on Android remain untested. This checkpoint publishes the visual experiment for review without changing the engine decision.
