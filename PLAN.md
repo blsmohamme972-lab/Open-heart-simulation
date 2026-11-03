@@ -1,6 +1,6 @@
 # Open Heart Surgery Simulation — Master Plan
 
-> Status: **PLANNING (Step 0 — skeleton)**. No game code is written yet; this document is the plan only.
+> Status: **PLANNING — fresh research restarted 2026-11-03**. This task changes planning documents only. The repository already contains a small Python heartbeat example; it is not a validated surgical or physiological simulator.
 
 ## Goal
 
@@ -22,6 +22,19 @@ Each step is pushed to the repo when it finishes:
 | 1 | Research: surgery, physiology, assets and licenses, engine and tech, realism, game design, production | `docs/plan/research/*.md` | Pending |
 | 2 | Design: engine decision + detailed plan sections | `docs/plan/*.md` | Pending |
 | 3 | Review: medical-accuracy, licensing, feasibility and completeness checks, then fixes | updated `docs/plan/*.md`, final `PLAN.md` | Pending |
+
+## Research restart — 2026-11-03
+
+The owner requested a new search and a complete plan before implementation. The four existing research reports are being checked against fresh primary sources, and the three missing domains will be completed. Historical reports remain available in Git history.
+
+- **Checkpoint A:** repository audit and research restart (this update).
+- **Checkpoint B:** seven refreshed research reports, with sources, limitations, and license evidence.
+- **Checkpoint C:** integrated scope, simulation architecture, asset pipeline, gameplay, production roadmap, and acceptance criteria.
+- **Checkpoint D:** independent gap review, corrections, and final planning handoff.
+
+Each completed checkpoint will be committed and a push attempted to the existing default branch. Any access failure will be recorded in [the progress log](docs/plan/PROGRESS.md); local commits are not represented as uploads.
+
+Working assumptions, pending research: personal/non-commercial use; desktop PC first; adult elective on-pump CABG as the first full procedure; Blender asset preparation; optional PC VR and haptics after the desktop simulation proves viable. These are reversible planning assumptions, not user hardware or budget commitments.
 
 ## Plan sections (filled in by Step 2)
 
