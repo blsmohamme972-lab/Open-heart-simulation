@@ -1,5 +1,19 @@
 # Research Prompts (reusable)
 
+> **2026-11-03 refresh:** the topic prompts below are retained as the historical research brief. Apply the updated evidence rules here when rerunning them. Do not fill a requested numeric table with guesses or treat the prompt's suggested engine/procedure as a verified conclusion.
+
+## Updated evidence rules
+
+- Open primary sources after searching; record access date, exact source version and any blocked/full-text limitations. Do not invent PMIDs, versions, prices or license terms.
+- Distinguish source facts, proposed software behavior, engineering estimates and clinical-review requirements. Numbers need context, units, population, procedure phase and measurement method.
+- A request for drug doses or exact timings does not justify a universal clinical protocol. Record conflicts; defer executable parameters to a reviewed case specification.
+- Check each asset's exact item/release terms and engine compatibility. Personal/noncommercial intent does not waive public-repository redistribution restrictions. Separate candidate, acquired, inspected and shipping-approved states.
+- Verify software capability in documentation; executable support and performance remain untested until experiments run. ECMO is not equivalent to surgical CPB; FEM is not automatically ground truth.
+- Assessment studies support only their measured outcomes. Do not turn mortality rates into random failure odds or describe a game score as validated clinical competence.
+- End with concrete implementation decisions, evidence gaps and pass/fail experiments. Preserve source URLs and original attribution rather than copying media or assessment forms.
+
+The completed fresh reports are indexed in [the master plan](../../../PLAN.md). These updated rules supersede contradictory assumptions in the historical prompts below.
+
 These are the prompts used in Step 1. You can paste them into any AI agent with web access (Claude, ChatGPT,
 Gemini, Perplexity, etc.) to repeat or extend the research. Comparing answers from several agents is a good way
 to find mistakes.

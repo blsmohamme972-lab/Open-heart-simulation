@@ -16,11 +16,13 @@ Task date: 2026-11-03. User instruction: redo searches, build the plan only, and
 
 Complete locally: all seven refreshed reports and an item-level candidate asset register. Sources, access limits, changed claims, licenses, and future validation gates are recorded. Parallel workers reported a credit-limit error after saving their reports; the coordinator recovered the saved files and is completing integration/review. The separate independent gap-review worker did not finish; no independent review is claimed.
 
-GitHub integration was discovered and offered as a connection option; connection remains unconfirmed. The existing credential failure still blocks upload. A push is attempted for the research checkpoint; its result is recorded in the next checkpoint.
+Research checkpoint `ce4ed5e` was committed locally; its initial push failed with the same missing HTTPS credential error.
+
+After the owner restored GitHub access, authenticated repository inspection returned ADMIN access and Git push succeeded: remote branch `ccr-03f48685-d2o76x` advanced from `301466b` to `ce4ed5e`. **Checkpoints A and B are now uploaded.** The earlier failure is resolved; no additional connection action is needed.
 
 ## C — Integrated design
 
-Pending. No engine project, game implementation, purchased assets, or clinical-data collection is authorized by this planning task.
+Complete locally: six integrated design documents and a rewritten master plan. Scope, backend selection, units, licensing, assistance, roadmap, dependencies and acceptance criteria are reconciled. No engine project, game implementation, purchased assets, or clinical-data collection was added. This stage will be committed and pushed before final review.
 
 ## D — Review and handoff
 
