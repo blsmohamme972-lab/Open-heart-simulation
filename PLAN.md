@@ -1,6 +1,6 @@
 # Open Heart Surgery Simulation — Master Plan
 
-**Updated: 2026-11-03 · Planning only · Integrated design complete; final document review in progress.**
+**Updated: 2026-11-03 · Planning complete · Research, integrated design and internal document review finished.**
 
 Build a serious, highly realistic open-heart surgery simulation game for personal/noncommercial use. Realism means coherent anatomy, instruments, tissue interaction, physiology, teamwork, visuals and sound. This plan does not certify medical accuracy or clinical training effectiveness. No game code was changed in this task; the existing small Python heartbeat example is not the planned simulator.
 
@@ -23,6 +23,7 @@ Initially use bounded tissue regions, authored cut paths, constrained needle han
 | [05 — Gameplay and assessment](docs/plan/05-gameplay-and-assessment.md) | Modes, desktop controls, team tasks, consequences, debrief, accessibility and assessment limits |
 | [06 — Roadmap and validation](docs/plan/06-roadmap-and-validation.md) | Milestones, dependencies, responsible roles, acceptance matrix, cost model and risks |
 | [Asset candidates](docs/plan/ASSET_LICENSES.csv) | Item URLs, creators, license evidence, redistribution conditions and blocked candidates |
+| [Final gap review](docs/plan/research/00-gap-review.md) | Source spot checks, resolved contradictions, remaining gates and review limits |
 | [Progress and upload record](docs/plan/PROGRESS.md) | Completed stages, repository checkpoints, upload outcomes and remaining work |
 
 ## Fresh research

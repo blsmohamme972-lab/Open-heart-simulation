@@ -22,8 +22,25 @@ After the owner restored GitHub access, authenticated repository inspection retu
 
 ## C — Integrated design
 
-Complete locally: six integrated design documents and a rewritten master plan. Scope, backend selection, units, licensing, assistance, roadmap, dependencies and acceptance criteria are reconciled. No engine project, game implementation, purchased assets, or clinical-data collection was added. This stage will be committed and pushed before final review.
+Complete and uploaded in `04636b8`: six integrated design documents and a rewritten master plan. Scope, backend selection, units, licensing, assistance, roadmap, dependencies and acceptance criteria are reconciled. No engine project, game implementation, purchased assets, or clinical-data collection was added. The remote branch advanced from `ce4ed5e` to `04636b8` successfully.
 
 ## D — Review and handoff
 
-Pending. Check links, evidence, licensing, cross-document consistency, scope, measurable acceptance gates, and repository diff. Clinical validation and runtime benchmarks are future work, not results of this documentation task.
+Complete: [internal gap review](research/00-gap-review.md), targeted source spot checks, cross-document reconciliation, and final planning handoff. The separate critic did not complete; the coordinating agent performed this review and does not claim independence.
+
+Documentation verification: relative links and referenced local anchors resolve; Markdown fences balance; the 16-row asset-candidate CSV has consistent columns and unique IDs, with no false acquisition/hash claims; `git diff --check` passes. The only changed paths are `PLAN.md` and `docs/plan/`. Existing Python code/tests and `.gitignore` match starting commit `301466b` byte-for-byte.
+
+No game tests were needed for this documents-only change. Clinical validation, geometry inspection, runtime benchmarks and educational studies remain future gates.
+
+This record is included in the final review checkpoint. Delivery verification compares its commit with the remote branch after push; the final chat handoff reports the resulting commit and repository link.
+
+## Checkpoint index
+
+| Checkpoint | Commit / identification | Result |
+|---|---|---|
+| A — restart | `1b2ba1a` | Uploaded after access restored |
+| B — fresh research | `ce4ed5e` | Uploaded after access restored |
+| C — integrated plan | `04636b8` | Uploaded successfully |
+| D — final review | Commit containing this final review record | Review complete; verify against remote at handoff |
+
+Planning is complete. Implementation has not begun. No unresolved repository-access action remains after the successful authenticated pushes.
