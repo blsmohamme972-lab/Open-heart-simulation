@@ -1,5 +1,7 @@
 # Open Heart Surgery Simulation
 
+**Current requirement: Android.** The active [Android realism review](docs/plan/android-review/00-REVIEW-STATUS.md) revisits the engine, heart animation, assets and surgical-tool interaction. The desktop-first proposal below is preserved as an earlier candidate, not the current platform requirement.
+
 ## المقترح الموحّد / Consolidated proposal
 
 **[OHS-PROPOSAL-001 — Codex Research & Design Proposal](docs/proposals/OHS-PROPOSAL-001-CODEX.md)**
