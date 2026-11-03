@@ -1,0 +1,148 @@
+{
+  "checked_on": "2026-11-03",
+  "source_record": "https://zenodo.org/records/10203116",
+  "license_metadata": {
+    "id": "cc-by-4.0"
+  },
+  "method": "Binary STL: uint32 triangle count at byte 80; require 84 + 50*N bytes; read little-endian float coordinates from each record; deduplicate exact coordinate tuples in first-occurrence order; count sorted undirected triangle edges; check exact-zero cross-product area and nonfinite coordinates. Compare MD5 with Zenodo metadata; record SHA256.",
+  "limitations": [
+    "Structural checks only; no clinical or rendered inspection",
+    "STL does not declare physical units",
+    "Edges with at most two incident faces do not establish a fully manifold surface",
+    "No self-intersection, anatomical correspondence, tissue thickness or motion calibration check",
+    "MD5 compared for source transfer consistency; SHA256 recorded for provenance",
+    "No graph-isomorphism or material-point correspondence verification; earlier ordering-dependent connectivity digests are not topology proofs"
+  ],
+  "samples": [
+    {
+      "file": "LCA_stl_walls_heart_cycle_010_percent.stl",
+      "sha256": "3e316f08c4b501db725626103381c00ff397850129e515b60411cd93ffeb929e",
+      "source_md5": "md5:5cb2468c709b023bfb107fcd2bd5aea0",
+      "source_md5_matches": true,
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "boundary_edges": 118,
+      "edges_more_than_two_faces": 0,
+      "exact_zero_area_triangles": 0,
+      "nonfinite_vertex_occurrences": 0
+    },
+    {
+      "file": "LCA_stl_walls_heart_cycle_020_percent.stl",
+      "sha256": "8a10d5008210deb95786e97aa9b82a176a08fbbacb3a9519840577cd02810d27",
+      "source_md5": "md5:bd8180418a12f6aa58e8fa6ada13ae75",
+      "source_md5_matches": true,
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "boundary_edges": 118,
+      "edges_more_than_two_faces": 0,
+      "exact_zero_area_triangles": 0,
+      "nonfinite_vertex_occurrences": 0
+    },
+    {
+      "file": "LCA_stl_walls_heart_cycle_030_percent.stl",
+      "sha256": "80ba5a0a5820ca5d1beca6dcc3708c3a128a39802945bd9a722648bef090ec99",
+      "source_md5": "md5:d0266fd378fe98cebd8ca079fd677ca8",
+      "source_md5_matches": true,
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "boundary_edges": 118,
+      "edges_more_than_two_faces": 0,
+      "exact_zero_area_triangles": 0,
+      "nonfinite_vertex_occurrences": 0
+    },
+    {
+      "file": "LCA_stl_walls_heart_cycle_040_percent.stl",
+      "sha256": "ef0a09ca4662adf4f02588edb3bf9930f226edc74e65bfdffad48fd37e595837",
+      "source_md5": "md5:e3ca026dda0086761afe6eeff8dc2c16",
+      "source_md5_matches": true,
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "boundary_edges": 118,
+      "edges_more_than_two_faces": 0,
+      "exact_zero_area_triangles": 0,
+      "nonfinite_vertex_occurrences": 0
+    },
+    {
+      "file": "LCA_stl_walls_heart_cycle_050_percent.stl",
+      "sha256": "8f7bfd3bba84da3f95a36e1e9e0d90b400e54c2b9126fe6c6dd28a243365e199",
+      "source_md5": "md5:c1d1261f349cc039147909c0a05a19de",
+      "source_md5_matches": true,
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "boundary_edges": 118,
+      "edges_more_than_two_faces": 0,
+      "exact_zero_area_triangles": 0,
+      "nonfinite_vertex_occurrences": 0
+    },
+    {
+      "file": "LCA_stl_walls_heart_cycle_060_percent.stl",
+      "sha256": "855afb4218deb16efa41f3bd131fc38ae63ba59bc52abea9a283b6088d8a5317",
+      "source_md5": "md5:1001d889660b6c30a4ccf66ce5628e99",
+      "source_md5_matches": true,
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "boundary_edges": 118,
+      "edges_more_than_two_faces": 0,
+      "exact_zero_area_triangles": 0,
+      "nonfinite_vertex_occurrences": 0
+    },
+    {
+      "file": "LCA_stl_walls_heart_cycle_070_percent.stl",
+      "sha256": "07f350eba88c4cf54e8928f7815fda5c34e3162d1cfdce878e7bc1ac41d93187",
+      "source_md5": "md5:229ff7f484a0af7acba9440d67c95b6e",
+      "source_md5_matches": true,
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "boundary_edges": 118,
+      "edges_more_than_two_faces": 0,
+      "exact_zero_area_triangles": 0,
+      "nonfinite_vertex_occurrences": 0
+    },
+    {
+      "file": "LCA_stl_walls_heart_cycle_080_percent.stl",
+      "sha256": "53d2d8bf0f2834c80f5cc9368e33d2e8aa8dc756de4e1ffd863923ff8ac9c174",
+      "source_md5": "md5:1456a39c498efb2801226a5ea2443667",
+      "source_md5_matches": true,
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "boundary_edges": 118,
+      "edges_more_than_two_faces": 0,
+      "exact_zero_area_triangles": 0,
+      "nonfinite_vertex_occurrences": 0
+    },
+    {
+      "file": "LCA_stl_walls_heart_cycle_090_percent.stl",
+      "sha256": "f1fff6fbd345801600c3bd07b17c83a4acea2f068283f2b39bcd828a89762c63",
+      "source_md5": "md5:002923379bfa6155f7c91695fd97d333",
+      "source_md5_matches": true,
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "boundary_edges": 118,
+      "edges_more_than_two_faces": 0,
+      "exact_zero_area_triangles": 0,
+      "nonfinite_vertex_occurrences": 0
+    },
+    {
+      "file": "LCA_stl_walls_heart_cycle_100_percent.stl",
+      "sha256": "d3d9c444a7762f994e1b477bac292931c0306fd0d91a422f3582502511951174",
+      "source_md5": "md5:263d75bb09eb14787e458addaf06c69a",
+      "source_md5_matches": true,
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "boundary_edges": 118,
+      "edges_more_than_two_faces": 0,
+      "exact_zero_area_triangles": 0,
+      "nonfinite_vertex_occurrences": 0
+    }
+  ]
+}

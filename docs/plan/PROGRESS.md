@@ -60,3 +60,9 @@ The owner corrected the platform to Android and requested a precise review focus
 Stage A corrected scope and was uploaded in `00150f4`. Stage B added four focused reports and a structural inspection record for two licensed coronary-motion samples, uploaded in `6e37271`. Stage C integrates decisions, mobile controls, sustained-performance tests and realism gates; its final commit is the handoff checkpoint. [Review log](android-review/00-REVIEW-STATUS.md).
 
 The native Android app, shaders, animation rig and tool physics remain unbuilt. Temporary source-sample inspection did not constitute clinical or rendered validation, and no third-party binary was committed. Existing game demonstration code remains unchanged.
+
+## G — Requested second verification
+
+The owner requested another check of the Android proposal. Baseline `f7e57e5` is reviewed in [OHS-ANDROID-RECHECK-002](android-review/05-REVERIFICATION.md). Two read-only source reviewers assisted; the coordinator rechecked all ten coronary STL phases and the instrument APIs. All ten source MD5 checks pass, and the original two SHA256 hashes match the earlier inspection.
+
+Stage G1 records evidence and concrete corrections: 16 KB native packaging, pinned platform/toolchain requirements, renderer/pacing defaults, temporal contact synchronization and asset-readiness limits. This checkpoint contains the audit and ten-file structural record. Stage G2 will reconcile proposal 002 and its supporting reports, verify documentation, and upload revision 2. No app implementation or phone benchmark is claimed.

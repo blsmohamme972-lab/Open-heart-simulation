@@ -17,7 +17,9 @@ The desktop-first platform and automatic Unreal preference in proposal OHS-PROPO
 |---|---|---|
 | A | Corrected scope and audit brief | Uploaded in `00150f4` |
 | B | Focused source review of engine, animation, assets and tools | Uploaded in `6e37271` |
-| C | New Android proposal, comparison to old choices, acceptance tests and source navigation | Complete; final verification and upload checkpoint |
+| C | New Android proposal, comparison to old choices, acceptance tests and source navigation | Uploaded in `f7e57e5` |
+| D1 | Requested second verification and all ten coronary phase files checked | Evidence checkpoint; see [audit](05-REVERIFICATION.md) |
+| D2 | Proposal revision 2 and report reconciliation | In progress after evidence checkpoint |
 
 Each completed stage is committed and pushed to the repository. Parallel review assistance was used; some workers stopped with workspace credit-limit errors. The coordinator continues the unsaved work and does not claim an independent clinical or runtime validation.
 
@@ -27,8 +29,9 @@ Each completed stage is committed and pushed to the repository. Parallel review 
 2. [Heart animation and contact geometry](02-heart-animation.md)
 3. [Asset candidates and licenses](03-assets-licenses.md)
 4. [Functional instruments and tissue contact](04-instruments-contact.md)
+5. [Second verification and concrete corrections](05-REVERIFICATION.md)
 
-The coordinator additionally downloaded two CC BY 4.0 coronary STL phases to temporary storage and inspected their binary geometry, with results in [motion-sample-inspection.json](motion-sample-inspection.json). Equal mesh counts did not establish compatible point indexing; registration is a required gate. No asset binary or application code is committed. No rendered/clinical geometry approval or phone benchmark was performed.
+The initial inspection covered two CC BY 4.0 coronary STL phases, with results in [motion-sample-inspection.json](motion-sample-inspection.json). The second verification extends structural checks to all ten phases in [coronary-sequence-recheck.json](coronary-sequence-recheck.json). Equal mesh counts do not establish material correspondence; ordering-dependent hashes do not establish different topology. No asset binary or application code is committed. No rendered/clinical geometry approval or phone benchmark was performed.
 
 ## Final disposition
 
