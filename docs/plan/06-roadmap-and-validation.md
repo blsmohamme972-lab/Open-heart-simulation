@@ -1,5 +1,7 @@
 # Delivery roadmap, acceptance gates, and risk ownership
 
+> **Historical desktop baseline:** the owner's current platform is Android. For animation, assets, rendering and tool interaction, use [OHS-PROPOSAL-002](../proposals/OHS-PROPOSAL-002-ANDROID-REALISM.md). The content below preserves the earlier plan; unrelated clinical/production assumptions are not newly validated by the Android review.
+
 Revision: 2026-11-03. Estimates are planning assumptions for an experienced full-time developer with intermittent art and clinical review support. No staffing, purchase, expert approval or release date is committed. See [production research](research/07-production-validation.md) for evidence and limitations.
 
 ## Milestones and critical path

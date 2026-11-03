@@ -1,5 +1,7 @@
 # Technical architecture and feasibility decisions
 
+> **Historical desktop baseline:** the owner's current platform is Android. For animation, assets, rendering and tool interaction, use [OHS-PROPOSAL-002](../proposals/OHS-PROPOSAL-002-ANDROID-REALISM.md). The content below preserves the earlier plan; unrelated clinical/production assumptions are not newly validated by the Android review.
+
 Revision: 2026-11-03. All components below are planned. Evidence: [engine research](research/04-engine-tech.md), [physiology research](research/02-physiology-perfusion.md). No performance figure here is a measured result.
 
 ## Stack decision

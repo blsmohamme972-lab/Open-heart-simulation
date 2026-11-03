@@ -1,5 +1,7 @@
 # Asset pipeline, anatomy, visuals, and audio
 
+> **Historical desktop baseline:** the owner's current platform is Android. For animation, assets, rendering and tool interaction, use [OHS-PROPOSAL-002](../proposals/OHS-PROPOSAL-002-ANDROID-REALISM.md). The content below preserves the earlier plan; unrelated clinical/production assumptions are not newly validated by the Android review.
+
 Revision: 2026-11-03. Detailed source evidence is in [assets research](research/03-assets-licensing.md), the [candidate register](ASSET_LICENSES.csv), and [realism research](research/05-visual-audio-realism.md). No third-party asset has been acquired, inspected in 3D, or approved for shipping.
 
 ## Baseline acquisition plan

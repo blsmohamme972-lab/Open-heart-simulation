@@ -1,6 +1,6 @@
 # Open Heart Surgery Simulation — Master Plan
 
-> **Current owner correction — Android:** the target is Android, and the active review focuses on heart animation, assets, engine rendering and surgical-tool contact. The desktop-first recommendations below are historical assumptions, superseded for that scope. Follow the [Android review](docs/plan/android-review/00-REVIEW-STATUS.md) for the updated proposal.
+> **Current owner requirement — Android:** read [OHS-PROPOSAL-002 — Android Realism](docs/proposals/OHS-PROPOSAL-002-ANDROID-REALISM.md) for heart animation, assets, engine rendering and surgical-tool contact. The desktop-first recommendations below are historical assumptions, superseded for that scope. [Source review and inspection evidence](docs/plan/android-review/00-REVIEW-STATUS.md).
 
 > **Named proposal for other agents:** [OHS-PROPOSAL-001 — Codex Research & Design Proposal](docs/proposals/OHS-PROPOSAL-001-CODEX.md) combines the documents below into one reviewable snapshot. Recommendations remain provisional and may be improved or replaced through evidence-based comparison. Planning completion does not mean implementation approval.
 

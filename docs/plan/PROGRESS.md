@@ -52,3 +52,11 @@ The owner requested a named proposal that other agents can read, compare and imp
 The proposal is explicitly provisional. It includes a reusable review prompt, navigation, source provenance and comparison criteria. The root README and PLAN index link to it. Relative links are rebased and citation links preserved; the source documents remain available. A separate read-only review checked the consolidation approach and its scope.
 
 There was no open pull request to merge; the earlier plan was already on the default branch. This checkpoint consolidates and publishes that plan as a named proposal. It does not merge unrelated branches or select a winning proposal. No fresh research or game implementation was added.
+
+## F — Android animation, assets and instrument review
+
+The owner corrected the platform to Android and requested a precise review focused on heart animation, assets, rendering engine and realistic tools. [OHS-PROPOSAL-002](../proposals/OHS-PROPOSAL-002-ANDROID-REALISM.md) supersedes the desktop assumptions for this scope while preserving proposal 001 for comparison.
+
+Stage A corrected scope and was uploaded in `00150f4`. Stage B added four focused reports and a structural inspection record for two licensed coronary-motion samples, uploaded in `6e37271`. Stage C integrates decisions, mobile controls, sustained-performance tests and realism gates; its final commit is the handoff checkpoint. [Review log](android-review/00-REVIEW-STATUS.md).
+
+The native Android app, shaders, animation rig and tool physics remain unbuilt. Temporary source-sample inspection did not constitute clinical or rendered validation, and no third-party binary was committed. Existing game demonstration code remains unchanged.

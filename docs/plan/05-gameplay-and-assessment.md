@@ -1,5 +1,7 @@
 # Gameplay, controls, team behavior, and assessment
 
+> **Historical desktop baseline:** the owner's current platform is Android. For animation, assets, rendering and tool interaction, use [OHS-PROPOSAL-002](../proposals/OHS-PROPOSAL-002-ANDROID-REALISM.md). The content below preserves the earlier plan; unrelated clinical/production assumptions are not newly validated by the Android review.
+
 Revision: 2026-11-03. Design proposal grounded in [gameplay research](research/06-game-design-assessment.md); medical and motor-skill effectiveness remain unvalidated.
 
 ## Play loop

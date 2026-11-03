@@ -1,5 +1,7 @@
 # Scope, intended experience, and fidelity contract
 
+> **Historical desktop baseline:** the owner's current platform is Android. For animation, assets, rendering and tool interaction, use [OHS-PROPOSAL-002](../proposals/OHS-PROPOSAL-002-ANDROID-REALISM.md). The content below preserves the earlier plan; unrelated clinical/production assumptions are not newly validated by the Android review.
+
 Planning revision: 2026-11-03. These are proposed product decisions. Research evidence is in [surgical workflow](research/01-surgical-procedure.md), [game design](research/06-game-design-assessment.md), and [production](research/07-production-validation.md).
 
 ## Product definition

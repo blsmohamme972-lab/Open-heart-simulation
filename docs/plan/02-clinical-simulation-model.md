@@ -1,5 +1,7 @@
 # Clinical state, procedure graph, and physiology design
 
+> **Historical desktop baseline:** the owner's current platform is Android. For animation, assets, rendering and tool interaction, use [OHS-PROPOSAL-002](../proposals/OHS-PROPOSAL-002-ANDROID-REALISM.md). The content below preserves the earlier plan; unrelated clinical/production assumptions are not newly validated by the Android review.
+
 Revision: 2026-11-03. Proposed software model, not instructions for performing surgery. Sources and uncertainty are detailed in [research 01](research/01-surgical-procedure.md) and [research 02](research/02-physiology-perfusion.md). No numerical clinical protocol is approved by this plan.
 
 ## Three models with one authoritative state

@@ -2,7 +2,7 @@
 
 Date: 2026-11-03. Owner correction: the target is an **Android application**, with very high performance and realism. This review focuses on **heart animation, anatomical/instrument assets, rendering engine, and tool–tissue interaction**. The ambition is world-leading realism; no comparative superiority is established by a plan.
 
-The desktop-first platform and automatic Unreal preference in proposal OHS-PROPOSAL-001 are superseded for this review. Retain that snapshot for comparison. The new proposal will be named **OHS-PROPOSAL-002-ANDROID-REALISM**. Full-case physiology, anesthesia, assessment and broader production plans are not being reimplemented here.
+The desktop-first platform and automatic Unreal preference in proposal OHS-PROPOSAL-001 are superseded for this review. Retain that snapshot for comparison. The new proposal is [OHS-PROPOSAL-002-ANDROID-REALISM](../../proposals/OHS-PROPOSAL-002-ANDROID-REALISM.md). Full-case physiology, anesthesia, assessment and broader production plans are not being reimplemented here.
 
 ## Working assumptions
 
@@ -16,8 +16,8 @@ The desktop-first platform and automatic Unreal preference in proposal OHS-PROPO
 | Stage | Output | State |
 |---|---|---|
 | A | Corrected scope and audit brief | Uploaded in `00150f4` |
-| B | Focused source review of engine, animation, assets and tools | Complete; publish this checkpoint |
-| C | New Android proposal, comparison to old choices, acceptance tests and source navigation | Pending |
+| B | Focused source review of engine, animation, assets and tools | Uploaded in `6e37271` |
+| C | New Android proposal, comparison to old choices, acceptance tests and source navigation | Complete; final verification and upload checkpoint |
 
 Each completed stage is committed and pushed to the repository. Parallel review assistance was used; some workers stopped with workspace credit-limit errors. The coordinator continues the unsaved work and does not claim an independent clinical or runtime validation.
 
@@ -29,3 +29,11 @@ Each completed stage is committed and pushed to the repository. Parallel review 
 4. [Functional instruments and tissue contact](04-instruments-contact.md)
 
 The coordinator additionally downloaded two CC BY 4.0 coronary STL phases to temporary storage and inspected their binary geometry, with results in [motion-sample-inspection.json](motion-sample-inspection.json). Equal mesh counts did not establish compatible point indexing; registration is a required gate. No asset binary or application code is committed. No rendered/clinical geometry approval or phone benchmark was performed.
+
+## Final disposition
+
+Godot Mobile/Vulkan is a provisional open-source-first candidate, conditional on a tissue-shader and device comparison. The proposed heart-animation pipeline requires a reviewed regional reference basis with shared contact geometry; instruments require functional articulation and contact models. The focused reports and new proposal retain explicit evidence and licensing limits. A separate engine reviewer checked the focused reports, inspection record and proposal 002 and found no blocking inconsistency; this is a technical consistency review, not a clinical sign-off.
+
+No device preference was received during this review; high-end-first remains an explicit reversible assumption. “World-leading” is an ambition to test through defined comparison criteria, not an achieved result.
+
+Documentation checks passed across 25 Markdown files and 138 local links/anchors; the inspection JSON is internally consistent and `git diff --check` passed. Existing Python example/test files and `.gitignore` match the pre-review commit `b761761`. No runtime test result is implied by these checks.
