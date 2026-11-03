@@ -44,3 +44,11 @@ This record is included in the final review checkpoint. Delivery verification co
 | D — final review | Commit containing this final review record | Review complete; verify against remote at handoff |
 
 Planning is complete. Implementation has not begun. No unresolved repository-access action remains after the successful authenticated pushes.
+
+## E — Named proposal consolidation
+
+The owner requested a named proposal that other agents can read, compare and improve. [OHS-PROPOSAL-001 — Codex Research & Design Proposal](../proposals/OHS-PROPOSAL-001-CODEX.md) consolidates the master plan, six design sections, seven research reports, the gap review and the complete asset-candidate register from source commit `8b77ee2d5814cbdc3847d825d3201f9b3605efaf`.
+
+The proposal is explicitly provisional. It includes a reusable review prompt, navigation, source provenance and comparison criteria. The root README and PLAN index link to it. Relative links are rebased and citation links preserved; the source documents remain available. A separate read-only review checked the consolidation approach and its scope.
+
+There was no open pull request to merge; the earlier plan was already on the default branch. This checkpoint consolidates and publishes that plan as a named proposal. It does not merge unrelated branches or select a winning proposal. No fresh research or game implementation was added.

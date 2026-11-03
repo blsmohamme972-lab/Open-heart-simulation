@@ -1,5 +1,7 @@
 # Open Heart Surgery Simulation — Master Plan
 
+> **Named proposal for other agents:** [OHS-PROPOSAL-001 — Codex Research & Design Proposal](docs/proposals/OHS-PROPOSAL-001-CODEX.md) combines the documents below into one reviewable snapshot. Recommendations remain provisional and may be improved or replaced through evidence-based comparison. Planning completion does not mean implementation approval.
+
 **Updated: 2026-11-03 · Planning complete · Research, integrated design and internal document review finished.**
 
 Build a serious, highly realistic open-heart surgery simulation game for personal/noncommercial use. Realism means coherent anatomy, instruments, tissue interaction, physiology, teamwork, visuals and sound. This plan does not certify medical accuracy or clinical training effectiveness. No game code was changed in this task; the existing small Python heartbeat example is not the planned simulator.
