@@ -15,8 +15,17 @@ The desktop-first platform and automatic Unreal preference in proposal OHS-PROPO
 
 | Stage | Output | State |
 |---|---|---|
-| A | Corrected scope and audit brief | Complete; publish this checkpoint |
-| B | Focused source review of engine, animation, assets and tools | In progress |
+| A | Corrected scope and audit brief | Uploaded in `00150f4` |
+| B | Focused source review of engine, animation, assets and tools | Complete; publish this checkpoint |
 | C | New Android proposal, comparison to old choices, acceptance tests and source navigation | Pending |
 
 Each completed stage is committed and pushed to the repository. Parallel review assistance was used; some workers stopped with workspace credit-limit errors. The coordinator continues the unsaved work and does not claim an independent clinical or runtime validation.
+
+## Focused evidence
+
+1. [Engine and Android rendering](01-engine-rendering.md)
+2. [Heart animation and contact geometry](02-heart-animation.md)
+3. [Asset candidates and licenses](03-assets-licenses.md)
+4. [Functional instruments and tissue contact](04-instruments-contact.md)
+
+The coordinator additionally downloaded two CC BY 4.0 coronary STL phases to temporary storage and inspected their binary geometry, with results in [motion-sample-inspection.json](motion-sample-inspection.json). Equal mesh counts did not establish compatible point indexing; registration is a required gate. No asset binary or application code is committed. No rendered/clinical geometry approval or phone benchmark was performed.

@@ -1,0 +1,65 @@
+{
+  "checked_on": "2026-11-03",
+  "source_record": "https://zenodo.org/records/10203116",
+  "metadata_api": "https://zenodo.org/api/records/10203116",
+  "license_from_metadata": "CC-BY-4.0",
+  "download_location": "Temporary workspace outside repository; binaries not committed",
+  "method": "Binary STL parsing; exact-coordinate vertex deduplication; triangle edge incidence counts",
+  "limitations": [
+    "No rendered or clinical inspection",
+    "STL does not encode a unit declaration; scale not assumed",
+    "Boundary edges may be intended vessel ends; geometry not automatically watertight tissue",
+    "Matching connectivity hash alone does not validate pointwise material correspondence",
+    "No motion calibration or Android benchmark"
+  ],
+  "samples": [
+    {
+      "file": "LCA_stl_walls_heart_cycle_010_percent.stl",
+      "sha256": "3e316f08c4b501db725626103381c00ff397850129e515b60411cd93ffeb929e",
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "edges_one_incident_triangle": 118,
+      "edges_more_than_two_incident_triangles": 0,
+      "bounds_native_units": [
+        [
+          -73.16940307617188,
+          -12.547699928283691
+        ],
+        [
+          136.7689971923828,
+          242.15199279785156
+        ],
+        [
+          -656.9539794921875,
+          -590.3389892578125
+        ]
+      ],
+      "connectivity_hash_after_first_occurrence_indexing": "6f157b1739b22d0b1a816abb337e3c9343ff535ecba29e330fd5aa61b7c48bd0"
+    },
+    {
+      "file": "LCA_stl_walls_heart_cycle_050_percent.stl",
+      "sha256": "8f7bfd3bba84da3f95a36e1e9e0d90b400e54c2b9126fe6c6dd28a243365e199",
+      "bytes": 1968484,
+      "triangles": 39368,
+      "unique_exact_positions": 19740,
+      "edges_one_incident_triangle": 118,
+      "edges_more_than_two_incident_triangles": 0,
+      "bounds_native_units": [
+        [
+          -69.53340148925781,
+          -15.249500274658203
+        ],
+        [
+          139.375,
+          237.0970001220703
+        ],
+        [
+          -651.2130126953125,
+          -587.8709716796875
+        ]
+      ],
+      "connectivity_hash_after_first_occurrence_indexing": "e0c2983942dc0185fec7617914ebea3b726067e10da7415128459366cd3c8b4a"
+    }
+  ]
+}
