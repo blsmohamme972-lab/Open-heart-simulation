@@ -17,8 +17,8 @@
 | Step | What happens | Output | Status |
 |------|--------------|--------|--------|
 | 0 | Proposal skeleton | `README.md` | Done |
-| 1 | Fresh research (new web searches), one report per topic, with sources | `research/*.md` | In progress |
-| 2 | Evidence check: fact-check key claims against sources + gap critic | `verification/*.md` | Pending |
+| 1 | Fresh research (new web searches), 9 reports with sources (54-98 sources each) | `research/*.md`, `research/INDEX.md` | Done |
+| 2 | Evidence check: fact-check key claims against sources + gap critic | `verification/*.md` | In progress |
 | 3 | Design: stack decision (judge panel) + detailed plan sections | `DECISIONS.md`, `sections/*.md` | Pending |
 | 4 | Review (medical, licensing, feasibility, completeness) + fixes; final plan | `PLAN.md`, `EVIDENCE.md` | Pending |
 
