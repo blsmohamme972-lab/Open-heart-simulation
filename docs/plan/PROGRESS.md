@@ -82,3 +82,5 @@ On 2026-11-04 the owner requested an example of how cannulation animation could 
 ## J — Owner rejection and reference-based motion correction
 
 The owner rejected storyboard 001 and confirmed that both appearance and motion need improvement. [Reference review 002](../concepts/cannulation-realism-002/REFERENCE-REVIEW.md) records the rejected features, an exact manufacturer reference family, inspected operative imagery and the limits of the requested 99% resemblance claim. The first checkpoint records this evidence and rejection before an actual Blender motion experiment. Manufacturer/reference images remain outside the repo; no realism score is asserted.
+
+The reference checkpoint was uploaded in `4f59390`. The next checkpoint adds an unchanged, newly generated appearance target based on inspected references, with source credit and explicit limits. The separate Blender motion prototype is being rendered and does not yet match the synthetic target's appearance; neither artifact is accepted as 99% realistic.

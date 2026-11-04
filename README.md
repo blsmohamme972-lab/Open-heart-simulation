@@ -6,7 +6,7 @@
 
 **Heart appearance experiment:** [OHS-HEART-APPEARANCE-001](docs/concepts/heart-appearance-001/README.md) is a generated 2D visual concept for discussion. It is not yet a 3D asset or animation.
 
-**Cannulation animation concept:** [OHS-CANNULATION-ANIMATION-001](docs/concepts/cannulation-animation-001/README.md) shows four proposed visual beats as a static storyboard, with attachment and tubing-motion notes. No animation runtime or video is included.
+**Cannulation realism correction:** [OHS-CANNULATION-REALISM-002](docs/concepts/cannulation-realism-002/README.md) records the new reference-guided appearance target and motion work. The owner rejected the earlier [static storyboard 001](docs/concepts/cannulation-animation-001/README.md) as unrealistic; it remains for history. No 99% resemblance result is claimed.
 
 ## المقترح الموحّد / Consolidated proposal
 
