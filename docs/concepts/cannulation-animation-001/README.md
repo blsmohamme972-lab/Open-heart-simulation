@@ -1,5 +1,7 @@
 # OHS-CANNULATION-ANIMATION-001 — Storyboard experiment
 
+**Owner verdict, 2026-11-04: rejected as insufficiently realistic.** Retained for history; it is not the accepted visual target. See [reference correction 002](../cannulation-realism-002/REFERENCE-REVIEW.md).
+
 Date: 2026-11-04. The owner requested an example of how cannulation animation could look. The illustrative case chosen here is an arterial perfusion cannula at an already prepared, authored ascending-aortic attachment site.
 
 ![Four-panel cannulation animation concept](cannulation-storyboard.png)

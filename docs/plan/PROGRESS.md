@@ -78,3 +78,7 @@ The owner requested a small experiment showing the heart's appearance. [OHS-HEAR
 ## I — Cannulation animation storyboard
 
 On 2026-11-04 the owner requested an example of how cannulation animation could look. [OHS-CANNULATION-ANIMATION-001](../concepts/cannulation-animation-001/README.md) contains a four-panel generated storyboard based on the earlier heart appearance concept. It specifies small local contact deformation, an explicit seated attachment and compliant external tubing. A brief read-only concept review checked these intended motion relationships. The delivered image is static; no video, animation rig, procedural guidance, clinical validation or runtime result is claimed. The checkpoint publishes the unchanged image and its limitations.
+
+## J — Owner rejection and reference-based motion correction
+
+The owner rejected storyboard 001 and confirmed that both appearance and motion need improvement. [Reference review 002](../concepts/cannulation-realism-002/REFERENCE-REVIEW.md) records the rejected features, an exact manufacturer reference family, inspected operative imagery and the limits of the requested 99% resemblance claim. The first checkpoint records this evidence and rejection before an actual Blender motion experiment. Manufacturer/reference images remain outside the repo; no realism score is asserted.
