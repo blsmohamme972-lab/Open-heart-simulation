@@ -74,3 +74,7 @@ Verification passed for 26 Markdown files and 156 local links/anchors, code-fenc
 ## H — Heart-only appearance experiment
 
 The owner requested a small experiment showing the heart's appearance. [OHS-HEART-APPEARANCE-001](../concepts/heart-appearance-001/README.md) records the generated 2D concept and its provenance. The original PNG is copied unchanged to the repository; no third-party model, animation, engine project or app implementation was added. Anatomical acceptance and feasibility of matching this look on Android remain untested. This checkpoint publishes the visual experiment for review without changing the engine decision.
+
+## I — Cannulation animation storyboard
+
+On 2026-11-04 the owner requested an example of how cannulation animation could look. [OHS-CANNULATION-ANIMATION-001](../concepts/cannulation-animation-001/README.md) contains a four-panel generated storyboard based on the earlier heart appearance concept. It specifies small local contact deformation, an explicit seated attachment and compliant external tubing. A brief read-only concept review checked these intended motion relationships. The delivered image is static; no video, animation rig, procedural guidance, clinical validation or runtime result is claimed. The checkpoint publishes the unchanged image and its limitations.
